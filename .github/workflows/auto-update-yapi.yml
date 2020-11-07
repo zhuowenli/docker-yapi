@@ -14,7 +14,7 @@ jobs:
       - name: Update
         run: |
           PROJECT_LATEST_TAG=$(wget -q -O- "https://api.github.com/repos/${GITHUB_REPOSITORY}/tags" | grep '"name":' | sed -E 's#.*"(.+)".*#\1#' | head -n1)
-          YAPI_LATEST_TAG=$(wget -q -O- https://api.github.com/repos/YMFE/yapi/tags | grep '"name":' | sed -E 's#.*"v(.+)".*#\1#' | head -n1)
+          YAPI_LATEST_TAG=$(wget -q -O- https://api.github.com/repos/zhuowenli/yapi/tags | grep '"name":' | sed -E 's#.*"v(.+)".*#\1#' | head -n1)
 
           echo "YApi: $YAPI_LATEST_TAG"
           echo "docker-YApi: $PROJECT_LATEST_TAG"
