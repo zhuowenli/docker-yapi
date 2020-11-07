@@ -402,7 +402,7 @@ class Main {
    */
   async waitMongoDBAvailable() {
     // fix: 使用数据库集群时跳过 MongoDB 检测
-    // issue: https://github.com/fjc0k/docker-YApi/issues/41
+    // issue: https://github.com/zhuowenli/docker-yapi/issues/41
     if (this.config.db.connectString) return
     await Helper.exec(`
       until nc -z ${this.config.db.servername} ${this.config.db.port || 27017}

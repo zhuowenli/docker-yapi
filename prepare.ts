@@ -64,7 +64,7 @@ async function prepare(rootDir: string) {
   pkgContent.dependencies = deps
   // 统一对 antd 的版本依赖
   // YApi 自身锁定了 antd 版本，但它的依赖中有依赖的 antd 的并没有锁定或锁定了不一致的版本
-  // issue: https://github.com/fjc0k/docker-YApi/issues/31
+  // issue: https://github.com/zhuowenli/docker-yapi/issues/31
   pkgContent.resolutions = {
     '**/antd': pkgContent.dependencies.antd,
   }

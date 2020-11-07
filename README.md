@@ -18,7 +18,6 @@
 - [如何升级](#如何升级)
 - [查看日志](#查看日志)
 - [如何迁移](#如何迁移)
-- [YApi 相关资源推荐](#yapi-相关资源推荐)
 
 <!-- /TOC -->
 
@@ -31,10 +30,10 @@
 首先，克隆本项目：
 
 ```bash
-git clone https://github.com/fjc0k/docker-YApi.git
+git clone https://github.com/zhuowenli/docker-yapi.git
 
 # 无法访问 github 的可使用国内镜像：
-git clone https://gitee.com/fjc0k/docker-YApi.git
+git clone https://gitee.com/zhuowenli/docker-yapi.git
 ```
 
 接下来，修改 `docker-compose.yml` 中 `yapi-web` 下的环境变量 `YAPI_ADMIN_ACCOUNT` 为你的管理员邮箱，`YAPI_ADMIN_PASSWORD` 为你的管理员密码。
@@ -113,7 +112,7 @@ git clone https://gitee.com/fjc0k/docker-YApi.git
 
 - [yapi-plugin-add-user](https://github.com/congqiu/yapi-plugin-add-user): 支持管理员直接通过邮箱添加用户。 <作者: [@congqiu](https://github.com/congqiu)>
 
-如果你有其他希望内置的插件，[欢迎提交 issue](https://github.com/fjc0k/docker-YApi/issues/new)。
+如果你有其他希望内置的插件，[欢迎提交 issue](https://github.com/zhuowenli/docker-yapi/issues/new)。
 
 ## 如何重启
 
@@ -125,7 +124,7 @@ docker-compose restart yapi-web
 
 ## 如何升级
 
-<img src="https://badgen.net/github/tag/YMFE/yapi?label=YApi%20%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC"> <img src="https://badgen.net/github/tag/fjc0k/docker-YApi?label=docker-YApi%20%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC">
+<img src="https://badgen.net/github/tag/YMFE/yapi?label=YApi%20%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC"> <img src="https://badgen.net/github/tag/zhuowenli/docker-yapi?label=docker-YApi%20%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC">
 
 若 `YApi` 有更新，本项目应会尽快跟进，之后，你可使用以下命令升级：
 
@@ -148,19 +147,5 @@ docker-compose logs yapi-web
 ## 如何迁移
 
 直接打包整个目录去新的服务器即可。
-
-## YApi 相关资源推荐
-
-- [YApi-X](https://github.com/fjc0k/YApi-X#readme)
-
-  YApi 二次开发版，进行了很多功能上的增强，原生支持 Docker 安装。
-
-- [YApi-X 浏览器插件](https://github.com/fjc0k/YApi-X/tree/master/chrome-extension#readme)
-
-  为 YApi-X 开发的浏览器跨域与文件上传插件，同时支持 YApi 官方版。
-
-- [YApi to TypeScript](https://github.com/fjc0k/yapi-to-typescript#readme)
-
-  根据 YApi 的接口定义生成 TypeScript 的接口类型及其请求函数代码，同时支持生成 React Hooks 代码。
 
 [Mongoose.prototype.connect()]: https://mongoosejs.com/docs/api/mongoose.html#mongoose_Mongoose-connect
